@@ -79,7 +79,7 @@ Class MainWindow
         End If
         Dim s10 As String = "<p class=""genmed"" style=""font-size: 13px; overflow: hidden;"">(.*?)</p>"
         k = Regex.Match(index1, s10, RegexOptions.Singleline)
-        lyric = k.Groups(1).Value.ToString.Replace("<br />", "").Replace("<span style=""font-size: 10%; line-height: 1px; color: #EEFFFF;"">" & Stitle & " lyrics on ChiaSeNhac.vn</span>", "").Replace("<span class=""lyric_translate1"">", "").Replace("</span>", "")
+        lyric = k.Groups(1).Value.ToString.Replace("<br />", "").Replace("<span style=""font-size: 10%; line-height: 1px; color: #EEFFFF;"">" & Stitle & " lyrics on ChiaSeNhac.vn</span>", "").Replace("<span class=""lyric_translate1"">", "").Replace("</span>", "").Replace("&quot;", """")
         Dim prgap As New Paragraph()
         prgap.Inlines.Add(lyric)
         rtb.Document.Blocks.Add(prgap)
