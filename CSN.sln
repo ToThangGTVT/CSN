@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CSN", "CSN\CSN.vbproj", "{71BF404F-1043-45F0-9DE5-B07868284CB1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsControlLibrary1", "WindowsControlLibrary1\WindowsControlLibrary1.vbproj", "{C0187868-3569-4D9D-878E-D3FE9FB4B2DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71BF404F-1043-45F0-9DE5-B07868284CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BF404F-1043-45F0-9DE5-B07868284CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BF404F-1043-45F0-9DE5-B07868284CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BF404F-1043-45F0-9DE5-B07868284CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0187868-3569-4D9D-878E-D3FE9FB4B2DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0187868-3569-4D9D-878E-D3FE9FB4B2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0187868-3569-4D9D-878E-D3FE9FB4B2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0187868-3569-4D9D-878E-D3FE9FB4B2DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

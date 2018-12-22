@@ -1,0 +1,14 @@
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\bin\Release\WindowsControlLibrary1.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\bin\Release\WindowsControlLibrary1.pdb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\bin\Release\WindowsControlLibrary1.xml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\bin\Release\Interop.WMPLib.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\bin\Release\AxInterop.WMPLib.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\Interop.WMPLib.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\AxInterop.WMPLib.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\WindowsControlLibrary1.vbproj.ResolveComReference.cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\WindowsControlLibrary1.Resources.resources
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\WindowsControlLibrary1.UserControl1.resources
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\WindowsControlLibrary1.vbproj.GenerateResource.Cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\WindowsControlLibrary1.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\WindowsControlLibrary1.xml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Release\WindowsControlLibrary1.pdb
