@@ -14,6 +14,14 @@ InitializeComponent
 	<summary>
 MainWindow
 </summary>
+</member><member name="M:CSN.option_frm.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:CSN.option_frm">
+	<summary>
+option_frm
+</summary>
 </member><member name="M:CSN.Application.InitializeComponent">
 	<summary>
 InitializeComponent

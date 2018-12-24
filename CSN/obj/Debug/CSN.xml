@@ -6,7 +6,15 @@ CSN
 </name>
 </assembly>
 <members>
-<member name="M:CSN.MainWindow.InitializeComponent">
+<member name="M:CSN.option_frm.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:CSN.option_frm">
+	<summary>
+option_frm
+</summary>
+</member><member name="M:CSN.MainWindow.InitializeComponent">
 	<summary>
 InitializeComponent
 </summary>

@@ -1,0 +1,16 @@
+﻿<Window x:Name="opt_wpf" x:Class="option_frm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+
+    Title="option_frm" Height="228.975" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Grid>
+        <Label Content="Số bài hát trong lịch sử" HorizontalAlignment="Left" Height="30" Margin="10,27,0,0" VerticalAlignment="Top" Width="154"/>
+        <TextBox x:Name="txt_lich_su" HorizontalAlignment="Left" Height="23" Margin="180,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" TextChanged="TextBox_TextChanged" Text="15"/>
+        <Button Content="Cancel" Margin="0,0,10,10" RenderTransformOrigin="2.709,1.8" HorizontalAlignment="Right" Width="59" Height="23" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <Button Content="OK" Margin="0,0,74,10" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="59" Click="Button_Click_1"/>
+        <Button Content="Apply" Margin="0,0,138,10" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="59"/>
+        <Label Content="Chất lượng nghe thấp nhất" HorizontalAlignment="Left" Height="33" Margin="10,57,0,0" VerticalAlignment="Top" Width="154"/>
+        <ComboBox x:Name="cbo_chat_luong" HorizontalAlignment="Left" Text="128 kbps" Height="23" Margin="180,59,0,0" VerticalAlignment="Top" Width="76" IsEditable="True" IsReadOnly="True"/>
+
+    </Grid>
+</Window>

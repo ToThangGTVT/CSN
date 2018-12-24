@@ -23,3 +23,7 @@ C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 20
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\bin\Debug\Interop.WMPLib.dll
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.exe.manifest
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.application
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.abo_frm.resources
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\option_frm.baml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\option_frm.g.vb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.update_v.resources

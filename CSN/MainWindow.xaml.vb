@@ -22,12 +22,23 @@ Class MainWindow
 
     Private Sub Grid_Loaded(sender As Object, e As RoutedEventArgs)
         On Error Resume Next
+        'khai báo tệp lịch sử
+        If (Not File.Exists(AppDomain.CurrentDomain.BaseDirectory + "history.txt")) Then
+            File.CreateText(AppDomain.CurrentDomain.BaseDirectory + "history.txt")
+        End If
+        'load lịch sử phát nhạc
+        Dim lich_su() As String = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "history.txt")
+        Dim i As Integer
+        For i = LBound(lich_su) To UBound(lich_su)
+            cbo_input.Items.Add(lich_su(i))
+        Next
         Dim AX As AxWMPLib.AxWindowsMediaPlayer = TryCast(winform.Child, AxWMPLib.AxWindowsMediaPlayer)
+        'craw data để lấy danh sách bài hát
         Dim http As New HttpRequest
         Dim index As String = http.Get("http://chiasenhac.vn").ToString
         Dim pattern As String = "<div class=""text2 text2x"">(.*?)</p>"
         Dim pattern2 As String = "title=""(.*?)"""
-        Dim i As Integer
+
         Dim s1 As String = Regex.Match(index, pattern, RegexOptions.Singleline).ToString
         For Each match In Regex.Matches(index, pattern, RegexOptions.Singleline)
             For Each match2 In Regex.Matches(match.ToString, pattern2, RegexOptions.Singleline)
@@ -41,7 +52,7 @@ Class MainWindow
         Next
         hoan_thanh_getsource = True
     End Sub
-
+    'lấy URL cửa web có trình phát nhạc vơi bài hát được chỉ định
     Function lay_URL(s As String)
         On Error Resume Next
         Dim url As String
@@ -50,6 +61,7 @@ Class MainWindow
         url = k.Groups(1).Value
         Return url
     End Function
+    'lấy URL của web có đường dẫn download vơi bài hát được chỉ định
     Function lay_URL_DL(s As String)
         On Error Resume Next
         Dim url As String
@@ -77,6 +89,7 @@ Class MainWindow
             Stitle = ds_title_search(lst.SelectedIndex + 1)
             index1 = http.Get(s0).ToString
         End If
+
         Dim s10 As String = "<p class=""genmed"" style=""font-size: 13px; overflow: hidden;"">(.*?)</p>"
         k = Regex.Match(index1, s10, RegexOptions.Singleline)
         lyric = k.Groups(1).Value.ToString.Replace("<br />", "").Replace("<span style=""font-size: 10%; line-height: 1px; color: #EEFFFF;"">" & Stitle & " lyrics on ChiaSeNhac.vn</span>", "").Replace("<span class=""lyric_translate1"">", "").Replace("</span>", "").Replace("&quot;", """")
@@ -89,15 +102,14 @@ Class MainWindow
         k1 = Regex.Match(index2, s11, RegexOptions.Singleline)
         Dim wcl As New WebClient
 
-        If (Not System.IO.Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "song/")) Then
-            System.IO.Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "song/")
+        If (Not Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "song/")) Then
+            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "song/")
         End If
         Dim song As String = AppDomain.CurrentDomain.BaseDirectory + "song/" + lst.SelectedItem.ToString + ".mp3"
 
         If File.Exists(song) = False Then
             wcl.DownloadFile("http://data" + k1.Groups(1).Value.ToString, AppDomain.CurrentDomain.BaseDirectory + "song/" + lst.SelectedItem.ToString + ".mp3")
         End If
-
 
         wmp.URL = song
 
@@ -114,6 +126,21 @@ Class MainWindow
         End If
         txttotal.Content = media.durationString
         scrl.Maximum = media.duration
+
+        'ghi lịch sử phát nhạc
+        Dim lich_su() As String = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "history.txt")
+        Dim ghi_lich_su_b As Boolean = True
+        For i = LBound(lich_su) To UBound(lich_su)
+            If lst.SelectedItem.ToString = lich_su(i) Then
+                ghi_lich_su_b = False
+                Exit For
+            End If
+        Next
+        If ghi_lich_su_b = True Then
+            ghi_lich_su(lst.SelectedItem.ToString)
+        End If
+
+        cbo_input.Items.Add(lst.SelectedItem.ToString)
     End Sub
 
     Public Sub timeTick(ByVal o As Object, ByVal sender As EventArgs)
@@ -200,10 +227,6 @@ Class MainWindow
     End Sub
     Sub stt()
         If wmp.playState = WMPLib.WMPPlayState.wmppsStopped Then
-            'Dim timerVideoTime = New DispatcherTimer()
-            'timerVideoTime.Interval = TimeSpan.FromSeconds(0)
-            'AddHandler timerVideoTime.Tick, AddressOf Me.timeTick
-            'timerVideoTime.Start()
             MsgBox("OK")
         End If
 
@@ -211,5 +234,57 @@ Class MainWindow
 
     Private Sub scrl_ValueChanged(sender As Object, e As RoutedPropertyChangedEventArgs(Of Double)) Handles scrl.ValueChanged
         wmp.Ctlcontrols.currentPosition = scrl.Value
+    End Sub
+
+    Private Sub MenuItem_Click(sender As Object, e As RoutedEventArgs)
+        Dim abo As New abo_frm
+        abo.ShowDialog()
+    End Sub
+
+    Private Sub MenuItem_Click_1(sender As Object, e As RoutedEventArgs)
+
+    End Sub
+
+    Private Sub MenuItem_Click_2(sender As Object, e As RoutedEventArgs)
+        End
+    End Sub
+
+    Private Sub MenuItem_Click_3(sender As Object, e As RoutedEventArgs) 'nút tùy chọn
+        Dim tc As New option_frm
+        tc.ShowDialog()
+    End Sub
+
+    Sub ghi_lich_su(text As String)
+        Dim f As StreamWriter
+        f = My.Computer.FileSystem.OpenTextFileWriter(AppDomain.CurrentDomain.BaseDirectory + "history.txt", True)
+        f.WriteLine(text)
+        f.Close()
+    End Sub
+
+    Sub xoa_cbo()
+        Me.cbo_input.Items.Clear()
+
+    End Sub
+
+    'xóa lịch sử
+    Private Sub MenuItem_Click_5(sender As Object, e As RoutedEventArgs)
+        If MsgBox("Bạn chắc chắn muốn xóa", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            My.Computer.FileSystem.DeleteFile(AppDomain.CurrentDomain.BaseDirectory + "history.txt")
+            cbo_input.Items.Clear()
+        End If
+    End Sub
+
+    Private Sub MenuItem_Click_4(sender As Object, e As RoutedEventArgs)
+        Dim webAddress As String = "https://www.facebook.com/tokun.nb"
+        Process.Start(webAddress)
+    End Sub
+
+    Private Sub MenuItem_Click_6(sender As Object, e As RoutedEventArgs)
+        MsgBox("Bạn tốt vl nhưng tác giả méo cần đâu" + vbNewLine + "ahihi")
+    End Sub
+    'nút check for update
+    Private Sub MenuItem_Click_7(sender As Object, e As RoutedEventArgs)
+        Dim f_update As New update_v
+        f_update.ShowDialog()
     End Sub
 End Class
