@@ -12,3 +12,5 @@ C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 20
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.dll
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.xml
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.pdb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbprojAssemblyReference.cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbproj.CoreCompileInputs.cache

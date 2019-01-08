@@ -1,6 +1,5 @@
 C:\Users\To Thang\AppData\Local\Temporary Projects\CSN\bin\Debug\CSN.exe.config
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\bin\Debug\CSN.exe.config
-C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.vbprojResolveAssemblyReference.cache
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\MainWindow.baml
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\MainWindow.g.vb
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\Application.g.vb
@@ -27,3 +26,6 @@ C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 20
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\option_frm.baml
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\option_frm.g.vb
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.update_v.resources
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.vbprojAssemblyReference.cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.vbproj.CoreCompileInputs.cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.vbproj.CopyComplete
