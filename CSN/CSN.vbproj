@@ -206,6 +206,7 @@
       <DependentUpon>update_v.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="CSN_TemporaryKey.pfx" />
+    <None Include="Graph1.dgml" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

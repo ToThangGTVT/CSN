@@ -7,11 +7,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CSN", "CSN\CSN.vbproj", "{7
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsControlLibrary1", "WindowsControlLibrary1\WindowsControlLibrary1.vbproj", "{C0187868-3569-4D9D-878E-D3FE9FB4B2DA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44889F76-2F79-4066-9E18-282041554A87}"
-	ProjectSection(SolutionItems) = preProject
-		Graph1.dgml = Graph1.dgml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

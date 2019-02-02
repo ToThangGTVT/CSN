@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSN.exe" size="363960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSN.exe" size="364472">
       <assemblyIdentity name="CSN" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OhKtpDVFLwbh9FovEH3hotgFfqpfthHtDpjNM5Dxr/A=</dsig:DigestValue>
+        <dsig:DigestValue>VlZ8cgBz+DuFOvBNJL8FkBi0+rqPLEQk651QVQECKVc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

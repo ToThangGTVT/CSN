@@ -3,8 +3,6 @@ Imports System.Text.RegularExpressions
 Imports System.IO
 Imports System.Net
 Imports System.Windows.Threading
-Imports System.Threading
-Imports AxWMPLib
 
 Class MainWindow
     Dim s0 As String
@@ -38,15 +36,12 @@ Class MainWindow
         Dim http As New HttpRequest
         Dim index As String = http.Get("http://beta.chiasenhac.vn").ToString
         Dim pattern As String = "<li class=""media (.*?)</li>"
-        'Dim pattern2 As String = "title=""(.*?)"""
         Dim ix As Integer 'chỉ số phần tử listbox bảng xếp hạng
-        'Dim s1 As String = Regex.Match(index, pattern, RegexOptions.Singleline).ToString
         For Each match In Regex.Matches(index, pattern, RegexOptions.Singleline)
             Dim tenBH As String = Regex.Match(match.ToString, "title=""(.*?)""><img").Groups(1).Value
             If tenBH <> "" Then
                 ix += 1
                 ReDim Preserve table(ix)
-                'ReDim Preserve title(ix)
                 table(ix) = match
                 Dim tenCS As String = lay_ten_CS(ix)
                 lst_BXH.Items.Add(tenBH + " - " + tenCS)
@@ -107,7 +102,7 @@ Class MainWindow
             Stitle = Title(lst_BXH.SelectedIndex + 1)
             index1 = http.Get(lay_URL(s0)).ToString
         Else
-            s0 = ds_url_search(lst.SelectedIndex + 1).ToString
+            s0 = ds_url_search(lst.SelectedIndex + 1).ToString.Replace("mp3.chiasenhac.vn", "beta.chiasenhac.vn")
             Stitle = ds_title_search(lst.SelectedIndex + 1)
             index1 = http.Get(s0).ToString
         End If
@@ -120,7 +115,6 @@ Class MainWindow
         Dim prgap As New Paragraph()
         prgap.Inlines.Add(lyric)
         rtb.Document.Blocks.Add(prgap)
-        'Dim index2 As String = http.Get(lay_URL_DL(index1)).ToString
         Dim s11 As String = "{""file"": ""(.*?)"", ""label"": ""32kbps"","
         Dim k1
         k1 = Regex.Match(index1, s11, RegexOptions.Singleline)
