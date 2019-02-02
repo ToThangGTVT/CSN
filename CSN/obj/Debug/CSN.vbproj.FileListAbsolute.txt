@@ -29,3 +29,64 @@ C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 20
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.vbprojAssemblyReference.cache
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.vbproj.CoreCompileInputs.cache
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\obj\Debug\CSN.vbproj.CopyComplete
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\CSN.exe.config
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\CSN.exe.manifest
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\CSN.application
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\CSN.exe
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\CSN.pdb
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\CSN.xml
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\Interop.WMPLib.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\WindowsControlLibrary1.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\WindowsControlLibrary1.pdb
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\bin\Debug\WindowsControlLibrary1.xml
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.vbprojAssemblyReference.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\MainWindow.baml
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\option_frm.baml
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\MainWindow.g.vb
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\option_frm.g.vb
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\Application.g.vb
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN_MarkupCompile.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.g.resources
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.abo_frm.resources
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.Resources.resources
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.update_v.resources
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.vbproj.GenerateResource.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.vbproj.CoreCompileInputs.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.exe.manifest
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.application
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.vbproj.CopyComplete
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.exe
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.xml
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\CSN\obj\Debug\CSN.pdb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\CSN.exe.config
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\CSN.exe.manifest
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\CSN.application
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\CSN.exe
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\CSN.pdb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\CSN.xml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\Interop.WMPLib.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\WindowsControlLibrary1.dll
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\WindowsControlLibrary1.pdb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\bin\Debug\WindowsControlLibrary1.xml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.vbprojAssemblyReference.cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\MainWindow.baml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\option_frm.baml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\Application.baml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\MainWindow.g.vb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\option_frm.g.vb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\Application.g.vb
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN_MarkupCompile.cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.g.resources
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.abo_frm.resources
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.Resources.resources
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.update_v.resources
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.vbproj.GenerateResource.cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.vbproj.CoreCompileInputs.cache
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.exe.manifest
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.application
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.vbproj.CopyComplete
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.exe
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.xml
+C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\CSN\obj\Debug\CSN.pdb

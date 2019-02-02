@@ -3,21 +3,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:windowForms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
     xmlns:activeXControl="clr-namespace:AxWMPLib;assembly=AxInterop.WMPLib"
-    Title="{Binding Path=Content, ElementName=txt_sus}" Height="399.667" Width="525">
+    Title="{Binding Path=Content, ElementName=txt_sus}" Height="399.667" Width="554">
     <Grid Loaded="Grid_Loaded" Margin="0,20,0,1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="515*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="lst"  Margin="15,57,0,75" HorizontalAlignment="Left" Width="211" Grid.Column="1"/>
-        <RichTextBox x:Name="rtb" IsReadOnly="True" Margin="249,57,13,75" IsEnabled="True" Grid.Column="1">
+        <RichTextBox x:Name="rtb" IsReadOnly="True" Margin="259,57,13,76" IsEnabled="True" Grid.Column="1">
             <FlowDocument/>
         </RichTextBox>
-
-        <GroupBox Header="Danh sách bài hát" Margin="5,34,0,64" HorizontalAlignment="Left" Width="230" Grid.Column="1"/>
-        <GroupBox Header="Lời bài hát" Margin="240,34,4,64" Grid.Column="1"/>
+        <GroupBox Header="Lời bài hát" Margin="249,34,4,65" Grid.Column="1"/>
         <Button Content="Tìm kiếm" IsDefault="True" Height="23" Margin="0,6,4,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="83" Click="Button_Click_2" Grid.Column="1"/>
         <Slider x:Name="scrl" Margin="26,0,338,10" Height="23" VerticalAlignment="Bottom" SmallChange="1" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" IsMoveToPointEnabled="True" Grid.Column="1"/>
         <Label x:Name="txttotal" Content="00:00" Margin="0,0,13,36" Height="29" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="51" Grid.Column="1"/>
@@ -29,7 +29,7 @@
         </WindowsFormsHost>
         <Label x:Name="txttime" Content="Label" HorizontalAlignment="Left" Height="24" Margin="209,272,0,0" VerticalAlignment="Top" Width="59" Opacity="0" Grid.Column="1"/>
         <CheckBox x:Name="chk" Content="Repeat" Grid.Column="1" Margin="70,0,0,36" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="58"/>
-        <Menu DockPanel.Dock="Top" Margin="0,-20,0,0" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top" >
+        <Menu Margin="0,-20,0,0" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top" >
             <MenuItem Header="_File">
                 <MenuItem Header="_Exit" Click="MenuItem_Click_2"/>
             </MenuItem>
@@ -39,7 +39,7 @@
                 <MenuItem Header="Repeat"/>
                 <Separator/>
                 <MenuItem Header="Delete history" Click="MenuItem_Click_5" />
-                <Separator/> 
+                <Separator/>
                 <MenuItem Header="Option" Click="MenuItem_Click_3" />
             </MenuItem>
             <MenuItem Header="Help">
@@ -51,5 +51,18 @@
             </MenuItem>
         </Menu>
         <ComboBox x:Name="cbo_input"  Grid.Column="1" Height="23" Margin="5,6,92,0" VerticalAlignment="Top" IsEditable="True"/>
+        <TabControl x:Name="tab_control" Grid.Column="1" HorizontalAlignment="Left" Margin="5,34,0,68" Width="239" SelectedIndex="0">
+            <TabItem x:Name="tab_BXH" Header="Top BXH">
+                <Grid >
+                    <ListBox x:Name="lst_BXH" Margin="5,5,0,7" HorizontalAlignment="Left" Width="222"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_timkiem" Header="Tìm kiếm">
+                <ListBox x:Name="lst" Margin="5,5,0,7" HorizontalAlignment="Left" Width="222"/>
+            </TabItem>
+            <TabItem x:Name="tab_dexuat" Header="Đề xuất">
+                <ListBox x:Name="lst_dexuat" Margin="5,5,0,7" HorizontalAlignment="Left" Width="222"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

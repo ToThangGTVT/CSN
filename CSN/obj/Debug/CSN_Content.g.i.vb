@@ -11,5 +11,5 @@
 Option Strict Off
 Option Explicit On
 
-<Assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons8-file-with-music-note-48.ico")> 
+<Assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons8-audio-wave2-64.ico")> 
 

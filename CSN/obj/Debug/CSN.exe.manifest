@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="CSN.exe" version="1.1.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
-  <description asmv2:iconFile="icons8-file-with-music-note-48.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:iconFile="icons8-audio-wave2-64.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="CSN" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSN.exe" size="60344">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSN.exe" size="363960">
       <assemblyIdentity name="CSN" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+Ot48Q82KHbkptifhZXLNXswxTLjV0loNOr0yvKE87Y=</dsig:DigestValue>
+        <dsig:DigestValue>8wYu5omTlB4B+a/CL4BgrVSQO6vBCrBixRmIjFCgeqI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -80,13 +80,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsControlLibrary1.dll" size="12800">
-      <assemblyIdentity name="WindowsControlLibrary1" version="1.0.6940.32936" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="WindowsControlLibrary1" version="1.0.6971.27457" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4GcQ/6kWA7X1o/bVof0lNGepOmOwU9pHXzgzzpV/6II=</dsig:DigestValue>
+        <dsig:DigestValue>AKgIHkGJ+2kDyeQt9jKdlojfLfT+ldJKA3j308LcXFo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,13 +111,13 @@
       <dsig:DigestValue>o761siw452hiLHFW1ChzO8SsZDSnEftNx5LyuQoBZEY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="icons8-file-with-music-note-48.ico" size="9662">
+  <file name="icons8-audio-wave2-64.ico" size="103763">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0n5jpsSyav9PM+dufMy0SuPzp4mT18PZpjFIdn99mQw=</dsig:DigestValue>
+      <dsig:DigestValue>+3gjX5On0mmrRVeFa1F5iYcqGZQ/yDQNiiMY3tr0suk=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

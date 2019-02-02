@@ -70,7 +70,7 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icons8-file-with-music-note-48.ico</ApplicationIcon>
+    <ApplicationIcon>icons8-audio-wave2-64.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>1272AE83B73C5091EFEAB516C5C3EF80E1887E75</ManifestCertificateThumbprint>
@@ -236,6 +236,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons8-file-with-music-note-48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-audio-file-48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-audio-wave2-64.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

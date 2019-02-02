@@ -14,3 +14,19 @@ C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 20
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.pdb
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbprojAssemblyReference.cache
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbproj.CoreCompileInputs.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\bin\Debug\WindowsControlLibrary1.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\bin\Debug\WindowsControlLibrary1.pdb
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\bin\Debug\WindowsControlLibrary1.xml
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\bin\Debug\Interop.WMPLib.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbprojAssemblyReference.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\Interop.WMPLib.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbproj.ResolveComReference.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.Resources.resources
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.UserControl1.resources
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbproj.GenerateResource.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbproj.CoreCompileInputs.cache
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.dll
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.xml
+C:\Users\To Thang\Desktop\CSN-master\CSN-master\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.pdb
