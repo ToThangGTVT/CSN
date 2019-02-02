@@ -4,6 +4,7 @@ Imports System.IO
 Imports System.Net
 Imports System.Windows.Threading
 Imports System.Threading
+Imports AxWMPLib
 
 Class MainWindow
     Dim s0 As String
@@ -130,21 +131,7 @@ Class MainWindow
         End If
         Dim song As String = AppDomain.CurrentDomain.BaseDirectory + "song/" + lst.SelectedItem.ToString + ".mp3"
 
-        wmp.URL = k1.Groups(1).Value.ToString
-
-        Dim Duration As String
-        Dim wmpt As WMPLib.WindowsMediaPlayer = New WMPLib.WindowsMediaPlayer
-        Dim media As WMPLib.IWMPMedia = wmpt.newMedia(song)
-
-        Dim timerVideoTime = New DispatcherTimer()
-        timerVideoTime.Interval = TimeSpan.FromSeconds(0)
-        AddHandler timerVideoTime.Tick, AddressOf Me.timeTick
-        timerVideoTime.Start()
-        If media IsNot Nothing Then
-            scrl.Maximum = media.durationString
-        End If
-        txttotal.Content = media.durationString
-        scrl.Maximum = media.duration
+        play_media(k1.Groups(1).Value.ToString)
 
         'ghi lịch sử phát nhạc
         Dim lich_su() As String = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "history.txt")
@@ -161,9 +148,25 @@ Class MainWindow
 
         cbo_input.Items.Add(lst.SelectedItem.ToString)
     End Sub
+    Sub play_media(url As String)
+        wmp.URL = url
+        Dim wmpt As WMPLib.WindowsMediaPlayer = New WMPLib.WindowsMediaPlayer
+        Dim media As WMPLib.IWMPMedia = wmpt.newMedia(url)
+
+        Dim timerVideoTime = New DispatcherTimer()
+        timerVideoTime.Interval = TimeSpan.FromSeconds(0)
+        AddHandler timerVideoTime.Tick, AddressOf Me.timeTick
+        timerVideoTime.Start()
+    End Sub
     Public Sub timeTick(ByVal o As Object, ByVal sender As EventArgs)
         On Error Resume Next
         txtreal.Content = wmp.Ctlcontrols.currentPositionString
+        If wmp.playState = 3 Then
+            txttotal.Content = wmp.currentMedia.durationString
+        End If
+        If txtreal.Content = txttotal.Content And chk.IsChecked = False Then
+            lst_BXH.SelectedIndex += 1
+        End If
     End Sub
 
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
@@ -224,7 +227,6 @@ Class MainWindow
         If chk.IsChecked = True Then
             repeat = True
         End If
-
     End Sub
 
     Public Property MyText() As String
