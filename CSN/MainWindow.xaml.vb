@@ -71,17 +71,24 @@ Class MainWindow
     End Function
     Function lay_ten_CS(i As Integer) As String
         Dim ten_casi As String = Nothing
+        Dim chieu_dai_ten_casi As Integer
+        Dim ten_tam As String = Nothing
         If Regex.Match(table(i).ToString, ";").ToString <> Nothing Then
             Dim match = Regex.Match(table(i).ToString, "<div class=""author(.*?)</div>")
             Dim match2 As String = Regex.Match(match.ToString, "><a href=""(.*?)</div>", RegexOptions.Singleline).Groups(1).Value
             For Each match3 In Regex.Matches(match2.ToString, ">(.*?)</a>")
-                ten_casi = ten_casi + match3.Value.ToString.Replace("</a>", "").Replace(">", "") + " ;"
+                ten_casi = ten_casi + match3.Value.ToString.Replace("</a>", "").Replace(">", "") + "; " '.Substring(2, ten_casi.Length - 6)
             Next
-            ten_casi = ten_casi.Substring(0, Len(ten_casi) - 1)
-            Dim iy As Integer
-            Debug.Print(iy)
+            ten_tam = ten_casi
+            chieu_dai_ten_casi = ten_casi.Length
+            ten_casi = ten_tam.Substring(0, chieu_dai_ten_casi - 2)
         Else
             ten_casi = Regex.Match(table(i).ToString, "html"">(.*?)</a></div>").Groups(1).Value
+            If ten_casi = Nothing Then
+                Dim match = Regex.Match(table(i).ToString, "<div class=""author(.*?)</div>")
+                Dim match2 As String = Regex.Match(match.ToString, "><a href=""(.*?)</div>", RegexOptions.Singleline).Groups(1).Value
+                ten_casi = Regex.Match(table(i).ToString, "ca-si"">(.*?)</a></div>").Groups(1).Value
+            End If
         End If
         Return ten_casi
     End Function
@@ -111,7 +118,6 @@ Class MainWindow
         k = Regex.Match(index1, s10, RegexOptions.Singleline)
         Dim lyric As String
         lyric = k.Groups(1).Value.ToString.Replace("<br />", "").Replace("<span style=""font-size: 10%; line-height: 1px; color: #EEFFFF;"">" & Stitle & " lyrics on ChiaSeNhac.vn</span>", "").Replace("<span class=""lyric_translate1"">", "").Replace("</span>", "").Replace("&quot;", """").Trim
-        Debug.Print(lyric)
         Dim prgap As New Paragraph()
         prgap.Inlines.Add(lyric)
         rtb.Document.Blocks.Add(prgap)
@@ -119,11 +125,6 @@ Class MainWindow
         Dim k1
         k1 = Regex.Match(index1, s11, RegexOptions.Singleline)
         Dim wcl As New WebClient
-
-        If (Not Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "song/")) Then
-            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "song/")
-        End If
-        Dim song As String = AppDomain.CurrentDomain.BaseDirectory + "song/" + lst.SelectedItem.ToString + ".mp3"
 
         play_media(k1.Groups(1).Value.ToString)
 

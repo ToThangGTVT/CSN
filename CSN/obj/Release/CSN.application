@@ -7,14 +7,14 @@
     <framework targetVersion="4.6" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="CSN.exe.manifest" size="7530">
+    <dependentAssembly dependencyType="install" codebase="CSN.exe.manifest" size="7515">
       <assemblyIdentity name="CSN.exe" version="1.1.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/1JKZNOzam7tmwsuR0qnEcF/Nwl0FT3vfrk/C+FXMtQ=</dsig:DigestValue>
+        <dsig:DigestValue>tWrwUGi+7z76020p7woLYnF8gaCJ498/LlrTSV0t9q4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

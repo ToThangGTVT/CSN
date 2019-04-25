@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VlZ8cgBz+DuFOvBNJL8FkBi0+rqPLEQk651QVQECKVc=</dsig:DigestValue>
+        <dsig:DigestValue>w0i6hFkxYXMG7Q/Fbc2qx+/gVi3kaNC/AGjd3XGtk+I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8EHQCNen5GpgpYK1Bi8OGQzRjeNk2fXfOcAe+tD3LIc=</dsig:DigestValue>
+        <dsig:DigestValue>6XEQLn5R0YOufSZcQPgBCft30eEDfZHPBFi9MM4evg4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsControlLibrary1.dll" size="12800">
-      <assemblyIdentity name="WindowsControlLibrary1" version="1.0.6971.27457" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="WindowsControlLibrary1" version="1.0.7054.29627" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AKgIHkGJ+2kDyeQt9jKdlojfLfT+ldJKA3j308LcXFo=</dsig:DigestValue>
+        <dsig:DigestValue>rWy/ufz/9tL5knnTGfJxVTPNQ7PKyOhmFaNbz5kWVvM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
