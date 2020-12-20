@@ -3,11 +3,16 @@ Imports System.Text.RegularExpressions
 Imports System.IO
 Imports System.Net
 Imports System.Windows.Threading
+Imports Microsoft.WindowsAPICodePack.Taskbar
+Imports System.Activities
+Imports System.Threading
 
 Class MainWindow
     Dim s0 As String
     Dim table() 'link+tên bài hát+ tên ca sĩ
-    Dim titleBH() As String  'tên bài hát
+    Dim table_dexuat() As String
+    Dim titleBH(0) As String  'tên bài hát
+    Dim titleBH_dexuat(0) As String  'tên bài hát đề xuất
     Dim ti As Single
     Dim timer As DispatcherTimer = New DispatcherTimer()
     Dim nhan_tim_kiem As Boolean = False
@@ -18,6 +23,7 @@ Class MainWindow
     Dim titleForm As String
     Dim repeat As Boolean = False
     Dim thaydoi As Boolean = False
+    Dim tab_dangchon As Integer = 1
 
     Private Sub Grid_Loaded(sender As Object, e As RoutedEventArgs)
         On Error Resume Next
@@ -34,7 +40,7 @@ Class MainWindow
         Dim AX As AxWMPLib.AxWindowsMediaPlayer = TryCast(winform.Child, AxWMPLib.AxWindowsMediaPlayer)
         'craw data để lấy danh sách bài hát
         Dim http As New HttpRequest
-        Dim index As String = http.Get("http://beta.chiasenhac.vn").ToString
+        Dim index As String = http.Get("http://chiasenhac.vn").ToString
         Dim pattern As String = "<li class=""media (.*?)</li>"
         Dim ix As Integer 'chỉ số phần tử listbox bảng xếp hạng
         For Each match In Regex.Matches(index, pattern, RegexOptions.Singleline)
@@ -45,21 +51,23 @@ Class MainWindow
                 table(ix) = match
                 Dim tenCS As String = lay_ten_CS(ix)
                 lst_BXH.Items.Add(tenBH + " - " + tenCS)
-
+                ReDim Preserve titleBH(ix)
+                titleBH(ix) = tenBH
             End If
-            titleBH(ix) = tenBH
         Next
         hoan_thanh_getsource = True
     End Sub
+
     'lấy URL cửa web có trình phát nhạc vơi bài hát được chỉ định
     Function lay_URL(s As String)
         On Error Resume Next
         Dim url As String
         Dim k
         k = Regex.Match(s0, "<a href=""(.*?)"" title=""", RegexOptions.Singleline)
-        url = "https://beta.chiasenhac.vn/" + k.Groups(1).Value
+        url = "https://chiasenhac.vn/" + k.Groups(1).Value
         Return url
     End Function
+
     'lấy URL của web có đường dẫn download vơi bài hát được chỉ định
     Function lay_URL_DL(s As String)
         On Error Resume Next
@@ -69,6 +77,7 @@ Class MainWindow
         url = k.Groups(1).Value
         Return "http://chiasenhac.vn" + url
     End Function
+
     Function lay_ten_CS(i As Integer) As String
         Dim ten_casi As String = Nothing
         Dim chieu_dai_ten_casi As Integer
@@ -92,27 +101,40 @@ Class MainWindow
         End If
         Return ten_casi
     End Function
+
     Private Sub lst_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles lst.SelectionChanged
+        tab_dangchon = 2
+        'nhan_tim_kiem = True
         nhan_listbox()
     End Sub
+
     Sub nhan_listbox()
         On Error Resume Next
         rtb.Document.Blocks.Clear()
-        Dim Stitle As String
-        txt_sus.Content = lst.SelectedItem.ToString
+        Dim Stitle As String = Nothing
         Dim http As New HttpRequest
         Dim k
-
+        Dim objList As Object
         Dim index1 As String
-        If nhan_tim_kiem = False Then
-            s0 = table(lst_BXH.SelectedIndex + 1).ToString
-            Stitle = Title(lst_BXH.SelectedIndex + 1)
-            index1 = http.Get(lay_URL(s0)).ToString
-        Else
-            s0 = ds_url_search(lst.SelectedIndex + 1).ToString.Replace("mp3.chiasenhac.vn", "beta.chiasenhac.vn")
-            Stitle = ds_title_search(lst.SelectedIndex + 1)
-            index1 = http.Get(s0).ToString
-        End If
+        Select Case tab_dangchon
+            Case 1
+                objList = lst_BXH
+                s0 = table(lst_BXH.SelectedIndex + 1).ToString
+                'Stitle = titleBH(lst_BXH.SelectedIndex + 1)
+                index1 = http.Get(lay_URL(s0)).ToString
+                txt_sus.Content = lst_BXH.SelectedItem.ToString
+            Case 2
+                objList = lst
+                s0 = ds_url_search(lst.SelectedIndex + 1).ToString.Replace("mp3.chiasenhac.vn", "chiasenhac.vn")
+                'Stitle = ds_title_search(lst.SelectedIndex + 1)
+                index1 = http.Get(s0).ToString
+                txt_sus.Content = lst.SelectedItem.ToString
+            Case 3
+                objList = lst_dexuat
+                s0 = table_dexuat(lst_dexuat.SelectedIndex + 1).ToString
+                index1 = http.Get(lay_URl_dexuat(s0)).ToString
+                txt_sus.Content = lst_dexuat.SelectedItem.ToString
+        End Select
 
         Dim s10 As String = "<div id=""fulllyric"">(.*?)</div>"
         k = Regex.Match(index1, s10, RegexOptions.Singleline)
@@ -128,21 +150,24 @@ Class MainWindow
 
         play_media(k1.Groups(1).Value.ToString)
 
+        Hienthidexuat(index1)
+
         'ghi lịch sử phát nhạc
         Dim lich_su() As String = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "history.txt")
         Dim ghi_lich_su_b As Boolean = True
         For i = LBound(lich_su) To UBound(lich_su)
-            If lst.SelectedItem.ToString = lich_su(i) Then
+            If objList.SelectedItem.ToString = lich_su(i) Then
                 ghi_lich_su_b = False
                 Exit For
             End If
         Next
         If ghi_lich_su_b = True Then
-            ghi_lich_su(lst.SelectedItem.ToString)
+            ghi_lich_su(objList.SelectedItem.ToString)
         End If
 
-        cbo_input.Items.Add(lst.SelectedItem.ToString)
+        cbo_input.Items.Add(objList.SelectedItem.ToString)
     End Sub
+
     Sub play_media(url As String)
         wmp.URL = url
         Dim wmpt As WMPLib.WindowsMediaPlayer = New WMPLib.WindowsMediaPlayer
@@ -153,10 +178,15 @@ Class MainWindow
         AddHandler timerVideoTime.Tick, AddressOf Me.timeTick
         timerVideoTime.Start()
     End Sub
+
     Public Sub timeTick(ByVal o As Object, ByVal sender As EventArgs)
         On Error Resume Next
         txtreal.Content = wmp.Ctlcontrols.currentPositionString
         If wmp.playState = 3 Then
+            Dim current As Integer = Integer.Parse(Replace(wmp.Ctlcontrols.currentPositionString, ":", ""))
+            Dim total As Integer = Integer.Parse(Replace(wmp.currentMedia.durationString, ":", ""))
+            Dim percent = current / total
+            showTaskProgress(percent * 100)
             txttotal.Content = wmp.currentMedia.durationString
         End If
         If txtreal.Content = txttotal.Content And chk.IsChecked = False Then
@@ -253,14 +283,6 @@ Class MainWindow
         abo.ShowDialog()
     End Sub
 
-    Private Sub MenuItem_Click_1(sender As Object, e As RoutedEventArgs)
-
-    End Sub
-
-    Private Sub MenuItem_Click_2(sender As Object, e As RoutedEventArgs)
-        End
-    End Sub
-
     Private Sub MenuItem_Click_3(sender As Object, e As RoutedEventArgs) 'nút tùy chọn
         Dim tc As New option_frm
         tc.ShowDialog()
@@ -300,6 +322,72 @@ Class MainWindow
     End Sub
 
     Private Sub lst_BXH_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles lst_BXH.SelectionChanged
+        tab_dangchon = 1
+        'nhan_tim_kiem = False
         nhan_listbox()
+    End Sub
+
+    Sub Hienthidexuat(index As String)
+        Dim pattern As String = "<li class=""media align-items-stretch"">(.*?)</li>"
+        Dim ix As Integer
+        For Each match In Regex.Matches(index, pattern, RegexOptions.Singleline)
+            Dim tenBH As String = Regex.Match(match.ToString, "title=""(.*?)"">").Groups(1).Value
+            If tenBH <> "" Then
+                ix += 1
+                ReDim Preserve table_dexuat(ix)
+                table_dexuat(ix) = match.ToString
+                Dim tenCS As String = lay_ten_CS_dexuat(ix)
+                lst_dexuat.Items.Add(tenBH + " - " + tenCS)
+                ReDim Preserve titleBH_dexuat(ix)
+                titleBH_dexuat(ix) = tenBH
+            End If
+        Next
+        lst_dexuat.Items.RemoveAt(11)
+        lst_dexuat.Items.RemoveAt(10)
+    End Sub
+
+    Function lay_ten_CS_dexuat(i As Integer) As String
+        Dim ten_casi As String = Nothing
+        Dim chieu_dai_ten_casi As Integer
+        Dim ten_tam As String = Nothing
+        If Regex.Match(table_dexuat(i).ToString, ";").ToString <> Nothing Then
+            Dim match = Regex.Match(table_dexuat(i).ToString, "<div class=""author(.*?)</div>")
+            Dim match2 As String = Regex.Match(match.ToString, "><a href=""(.*?)</div>", RegexOptions.Singleline).Groups(1).Value
+            For Each match3 In Regex.Matches(match2.ToString, ">(.*?)</a>")
+                ten_casi = ten_casi + match3.Value.ToString.Replace("</a>", "").Replace(">", "") + "; " '.Substring(2, ten_casi.Length - 6)
+            Next
+            ten_tam = ten_casi
+            chieu_dai_ten_casi = ten_casi.Length
+            ten_casi = ten_tam.Substring(0, chieu_dai_ten_casi - 2)
+        Else
+            ten_casi = Regex.Match(table_dexuat(i).ToString, "html"">(.*?)</a></div>").Groups(1).Value
+            If ten_casi = Nothing Then
+                Dim match = Regex.Match(table_dexuat(i).ToString, "<div class=""author(.*?)</div>")
+                Dim match2 As String = Regex.Match(match.ToString, "><a href=""(.*?)</div>", RegexOptions.Singleline).Groups(1).Value
+                ten_casi = Regex.Match(table_dexuat(i).ToString, "ca-si"">(.*?)</a></div>").Groups(1).Value
+            End If
+        End If
+        Return ten_casi
+    End Function
+
+    Private Sub Lst_dexuat_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles lst_dexuat.SelectionChanged
+        tab_dangchon = 3
+        nhan_listbox()
+    End Sub
+
+    Function lay_URl_dexuat(index As String)
+        Dim pattern As String = "chiasenhac(.*?)html"
+        Return "http://" + Regex.Match(index, pattern).Value.ToString
+    End Function
+
+    Private Sub showTaskProgress(value As Integer)
+        Dim max As Integer = 100
+        Dim prog = TaskbarManager.Instance
+        prog.SetProgressState(TaskbarProgressBarState.Normal)
+        'For i As Integer = 0 To max - 1
+        prog.SetProgressValue(value, max)
+        'Thread.Sleep(100)
+        'Next
+        'prog.SetProgressState(TaskbarProgressBarState.NoProgress)
     End Sub
 End Class

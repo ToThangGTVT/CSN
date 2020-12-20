@@ -46,3 +46,18 @@ C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 20
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.dll
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.xml
 C:\Users\To Thang\OneDrive - University of transport and Communication\vb.net 2017\CSN\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.pdb
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\bin\Debug\WindowsControlLibrary1.dll
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\bin\Debug\WindowsControlLibrary1.pdb
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\bin\Debug\WindowsControlLibrary1.xml
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\bin\Debug\Interop.WMPLib.dll
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\Interop.WMPLib.dll
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbproj.ResolveComReference.cache
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.Resources.resources
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.UserControl1.resources
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbproj.GenerateResource.cache
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.vbproj.CoreCompileInputs.cache
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.dll
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.xml
+C:\Users\ToThang\Source\Repos\CSN\WindowsControlLibrary1\obj\Debug\WindowsControlLibrary1.pdb
